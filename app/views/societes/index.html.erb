@@ -1,0 +1,29 @@
+<h1>Liste des societes</h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Adresse</th>
+	<th>Code postal</th>
+	<th>Ville</th>
+	<th>Téléphone</th>
+	<th>Fax</th>
+  </tr>
+
+<% @societes.each do |societe| %>
+  <tr>
+    <td><%=h societe.nom %></td>
+    <td><%=h societe.ville %></td>
+	<td><%=h societe.code_postal %></td>
+	<td><%=h societe.telephone %></td>
+	<td><%=h societe.fax %></td>
+    <td><%= link_to 'Show', societe %></td>
+    <td><%= link_to 'Edit', edit_societe_path(societe) %></td>
+    <td><%= link_to 'Destroy', societe, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to "Ajout d'une societe", new_societe_path %>

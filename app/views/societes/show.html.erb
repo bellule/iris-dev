@@ -1,0 +1,13 @@
+<p>
+  <b>Nom:</b>
+  <%=h @societe.nom %>
+</p>
+
+<p>
+  <b>Adresse:</b>
+  <%=h @societe.adresse %>
+</p>
+
+
+<%= link_to 'Edit', edit_societe_path(@societe) %> |
+<%= link_to 'Back', societes_path %>

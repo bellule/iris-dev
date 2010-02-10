@@ -1,0 +1,1660 @@
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 11:43:02) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: societes: SELECT * FROM "societes" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: societes: SELECT * FROM "societes" ):
+  app/controllers/societes_controller.rb:5:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (312.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (16.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (141.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSocietes (20100210103343)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "societes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nom" varchar(255), "adresse" varchar(255), "adresse1" varchar(255), "ville" varchar(255), "pays" varchar(255), "adresse_web" varchar(255), "telephone" varchar(255), "telephone1" varchar(255), "fax" varchar(255), "commentaire" varchar(255), "alerte" varchar(255), "naf" varchar(255), "siret" varchar(255), "commercial" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100210103343')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("societes")[0m
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 11:43:15) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 2516ms (View: 2500, DB: 0) | 200 OK [http://127.0.0.1/societes/]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 11:43:19) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 11:45:40) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 11:45:41) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 11:46:20) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 11:48:03) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 11:50:03) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 11:50:04) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined method `code_postal' for #<Societe:0x47fea8c>) on line #24 of app/views/societes/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :code_postal %><br />
+24:     <%= f.text_field :code_postal %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/societes/new.html.erb:24
+    app/views/societes/new.html.erb:3
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (406.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 11:50:56) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined method `number_field' for #<ActionView::Helpers::FormBuilder:0x47bcfec>) on line #24 of app/views/societes/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :code_postal %><br />
+24:     <%= f.number_field :code_postal %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/societes/new.html.erb:24
+    app/views/societes/new.html.erb:3
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (500.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 11:50:58) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined method `number_field' for #<ActionView::Helpers::FormBuilder:0x480f378>) on line #24 of app/views/societes/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :code_postal %><br />
+24:     <%= f.number_field :code_postal %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/societes/new.html.erb:24
+    app/views/societes/new.html.erb:3
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (937.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 11:51:19) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined method `code_postal' for #<Societe:0x48931c8>) on line #24 of app/views/societes/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :code_postal %><br />
+24:     <%= f.text_field :code_postal %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/societes/new.html.erb:24
+    app/views/societes/new.html.erb:3
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (391.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 11:52:55) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined method `code_postal' for #<Societe:0x48a8140>) on line #24 of app/views/societes/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :code_postal, "Code postal" %><br />
+24:     <%= f.text_field :code_postal %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/societes/new.html.erb:24
+    app/views/societes/new.html.erb:3
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (187.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 11:52:57) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined method `code_postal' for #<Societe:0x48c9c78>) on line #24 of app/views/societes/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :code_postal, "Code postal" %><br />
+24:     <%= f.text_field :code_postal %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/societes/new.html.erb:24
+    app/views/societes/new.html.erb:3
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 11:52:58) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined method `code_postal' for #<Societe:0x473ccc0>) on line #24 of app/views/societes/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :code_postal, "Code postal" %><br />
+24:     <%= f.text_field :code_postal %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/societes/new.html.erb:24
+    app/views/societes/new.html.erb:3
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (188.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 11:53:28) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined method `code_postal' for #<Societe:0x478b85c>) on line #24 of app/views/societes/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :code_postal, "Code postal" %><br />
+24:     <%= f.text_field :code_postal %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/societes/new.html.erb:24
+    app/views/societes/new.html.erb:3
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (188.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSocietes (20100210103343)
+  [4;36;1mSQL (16.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (140.0ms)[0m   [0mDROP TABLE "societes"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100210103343'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSocietes (20100210103343)
+  [4;36;1mSQL (32.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mCREATE TABLE "societes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nom" varchar(255), "adresse" varchar(255), "adresse1" varchar(255), "ville" varchar(255), "pays" varchar(255), "adresseweb" varchar(255), "telephone" varchar(255), "telephone1" varchar(255), "fax" varchar(255), "commentaire" varchar(255), "alerte" varchar(255), "naf" varchar(255), "siret" varchar(255), "commercial" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100210103343')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("societes")[0m
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:00:38) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined method `codepostal' for #<Societe:0x4795988>) on line #24 of app/views/societes/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :codepostal, "Code postal" %><br />
+24:     <%= f.text_field :codepostal %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/societes/new.html.erb:24
+    app/views/societes/new.html.erb:3
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:00:43) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined method `codepostal' for #<Societe:0x47a90dc>) on line #24 of app/views/societes/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :codepostal, "Code postal" %><br />
+24:     <%= f.text_field :codepostal %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/societes/new.html.erb:24
+    app/views/societes/new.html.erb:3
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (687.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSocietes (20100210103343)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mDROP TABLE "societes"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100210103343'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSocietes (20100210103343)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE TABLE "societes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nom" varchar(255), "adresse" varchar(255), "adresse1" varchar(255), "ville" varchar(255), "code_postal" integer, "pays" varchar(255), "adresseweb" varchar(255), "telephone" varchar(255), "telephone1" varchar(255), "fax" varchar(255), "commentaire" varchar(255), "alerte" varchar(255), "naf" varchar(255), "siret" varchar(255), "commercial" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100210103343')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (16.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("societes")[0m
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:03:12) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:03:43) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 12:03:57) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:04:18) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:06:13) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 500ms (View: 360, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:08:32) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:09:13) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined method `paye' for #<Societe:0x4827d24>) on line #27 of app/views/societes/new.html.erb:
+24:   </p>
+25:   p>
+26:     <%= f.label :paye %><br />
+27:     <%= f.text_field :paye %>
+28:   </p>
+29:   <p>
+30:     <%= f.submit 'Create' %>
+
+    app/views/societes/new.html.erb:27
+    app/views/societes/new.html.erb:3
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (422.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:09:31) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:09:47) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:10:31) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:11:13) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 625ms (View: 594, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:12:07) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:12:20) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 12:18:00) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-10 12:18:03) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7a7MSe+XmSXadNUwjnMHEFLWZYdmFHuPfrEmPbi/3uE=", "societe"=>{"ville"=>"", "nom"=>"", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"tryerty", "adresseweb"=>""}}
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-10 13:50:43) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7a7MSe+XmSXadNUwjnMHEFLWZYdmFHuPfrEmPbi/3uE=", "societe"=>{"ville"=>"", "nom"=>"", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"tryerty", "adresseweb"=>""}}
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 4984ms (View: 2125, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 13:50:49) [GET]
+  [4;36;1mSociete Load (78.0ms)[0m   [0;1mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 797ms (View: 312, DB: 78) | 200 OK [http://127.0.0.1/societes/]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 13:53:33) [GET]
+  [4;35;1mSociete Load (31.0ms)[0m   [0mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 218ms (View: 62, DB: 31) | 200 OK [http://127.0.0.1/societes/]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 13:53:44) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 391ms (View: 297, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-10 13:54:24) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7a7MSe+XmSXadNUwjnMHEFLWZYdmFHuPfrEmPbi/3uE=", "societe"=>{"ville"=>"dfgd", "nom"=>"", "adresse1"=>"fgd", "pays"=>"dfgd", "telephone1"=>"fdg", "code_postal"=>"dfgdf", "telephone"=>"dfg", "adresse"=>"dfgdf", "adresseweb"=>"dfg"}}
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-10 16:06:31) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7a7MSe+XmSXadNUwjnMHEFLWZYdmFHuPfrEmPbi/3uE=", "societe"=>{"ville"=>"dfgd", "nom"=>"uyky", "adresse1"=>"fgd", "pays"=>"dfgd", "telephone1"=>"fdg", "code_postal"=>"dfgdf", "telephone"=>"dfg", "adresse"=>"dfgdf", "adresseweb"=>"dfg"}}
+  [4;36;1mSociete Create (31.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('dfgd', 'uyky', '2010-02-10 15:06:33', 'fgd', NULL, NULL, 'dfgd', NULL, 'fdg', 0, NULL, 'dfgdf', 'dfg', NULL, NULL, 'dfg', '2010-02-10 15:06:33')[0m
+Redirected to http://127.0.0.1:3001/societes/1
+Completed in 3265ms (DB: 31) | 302 Found [http://127.0.0.1/societes]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-10 16:06:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSociete Load (31.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 1) [0m
+Rendering template within layouts/societes
+Rendering societes/show
+Completed in 1547ms (View: 1062, DB: 31) | 200 OK [http://127.0.0.1/societes/1]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 16:07:07) [GET]
+  [4;36;1mSociete Load (31.0ms)[0m   [0;1mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 641ms (View: 360, DB: 31) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:08:17) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 516ms (View: 422, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:09:32) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 406ms (View: 297, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:17:25) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 3422ms (View: 3344, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:18:52) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:20:44) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 16:21:51) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 16:22:03) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 16:23:01) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+ERROR: compiling _run_erb_app47views47societes47index46html46erb RAISED compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/index.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting ')'
+@output_buffer.concat(( link_to 'Ajout d'un societe', new_societe_path ).to_s); @output_buffer
+                                           ^
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/index.html.erb:29: unterminated string meets end of file
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/index.html.erb:29: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47societes47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Liste des societes</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Nom</th>\n"
+@output_buffer.concat "    <th>Adresse</th>\n"
+@output_buffer.concat "\t<th>Code postal</th>\n"
+@output_buffer.concat "\t<th>Ville</th>\n"
+@output_buffer.concat "\t<th>T\303\251l\303\251phone</th>\n"
+@output_buffer.concat "\t<th>Fax</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @societes.each do |societe| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h societe.nom ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h societe.ville ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "\t<td>"; @output_buffer.concat((h societe.code_postal ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "\t<td>"; @output_buffer.concat((h societe.telephone ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "\t<td>"; @output_buffer.concat((h societe.fax ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', societe ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_societe_path(societe) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Destroy', societe, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Ajout d'un societe', new_societe_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/index.html.erb:29:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/controllers/societes_controller.rb:7:in `index'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/index.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting ')'
+@output_buffer.concat(( link_to 'Ajout d'un societe', new_societe_path ).to_s); @output_buffer
+                                           ^
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/index.html.erb:29: unterminated string meets end of file
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/index.html.erb:29: syntax error, unexpected $end, expecting ')') on line #29 of app/views/societes/index.html.erb:
+26: 
+27: <br />
+28: 
+29: <%= link_to 'Ajout d'un societe', new_societe_path %>
+
+    app/views/societes/index.html.erb:29:in `compile!'
+    app/controllers/societes_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (391.0ms)
+Rendered rescues/_request_and_response (109.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 16:24:54) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-10 16:25:08) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 94ms (View: 63, DB: 15) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:25:11) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:26:06) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+ERROR: compiling _run_erb_app47views47societes47new46html46erb RAISED compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:7: syntax error, unexpected ')'
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :nom , :size=> 100% ).to_s); @output_buffer.concat "\n"
+                                                                                        ^
+Function body:           def _run_erb_app47views47societes47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(@societe) do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<fieldset>\n"
+@output_buffer.concat "\t<legend>Ajout d'une societe</legend>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "  \t"; @output_buffer.concat(( f.label :nom ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :nom , :size=> 100% ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "     "; @output_buffer.concat(( f.label :adresse ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresse ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "    <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresse1 ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :ville ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :ville ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :code_postal, "Code postal" ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :code_postal, :size => 10 ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :pays ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :pays ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :adresseweb, "Adresse Web" ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresseweb ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :telephone ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :telephone ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :telephone1 ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :telephone1 ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.submit 'Ajouter' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</fieldset>\n"
+@output_buffer.concat "  </div>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Retour', societes_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:50:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/controllers/societes_controller.rb:29:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:7: syntax error, unexpected ')'
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :nom , :size=> 100% ).to_s); @output_buffer.concat "\n"
+                                                                                        ^) on line #7 of app/views/societes/new.html.erb:
+4: 	<legend>Ajout d'une societe</legend>
+5:   <div>
+6:   	<%= f.label :nom %><br />
+7:     <%= f.text_field :nom , :size=> 100% %>
+8:   </div>
+9:   
+10:   <div>
+
+    app/views/societes/new.html.erb:50:in `compile!'
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:26:25) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:27:07) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:27:35) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 297ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:27:49) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:34:02) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+
+ActionView::TemplateError (undefined local variable or method `path' for #<ActionView::Base:0x47ecc88>) on line #1 of app/views/societes/new.html.erb:
+1: <% form_for(@societe , :url => path) do |f| %>
+2:   <%= f.error_messages %>
+3: <fieldset>
+4: 	<legend>Ajout d'une societe</legend>
+
+    app/views/societes/new.html.erb:1
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (344.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:34:46) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+ERROR: compiling _run_erb_app47views47societes47new46html46erb RAISED compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:1: syntax error, unexpected ','
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(@societe ) do |f|, :url => path ; @output_buffer.concat "\n"
+                                                                                                                          ^
+Function body:           def _run_erb_app47views47societes47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(@societe ) do |f|, :url => path ; @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<fieldset>\n"
+@output_buffer.concat "\t<legend>Ajout d'une societe</legend>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "  \t"; @output_buffer.concat(( f.label :nom ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :nom , :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "     "; @output_buffer.concat(( f.label :adresse ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresse , :size=> "100%").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "    <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresse1 , :size=> "100%").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :ville ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :ville, :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :code_postal, "Code postal" ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :code_postal, :size => 10 ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :pays ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :pays ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :adresseweb, "Adresse Web" ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresseweb, :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :telephone ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :telephone ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :telephone1 ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :telephone1 ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.submit 'Ajouter' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</fieldset>\n"
+@output_buffer.concat "  </div>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Retour', societes_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:50:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/controllers/societes_controller.rb:29:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:1: syntax error, unexpected ','
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(@societe ) do |f|, :url => path ; @output_buffer.concat "\n"
+                                                                                                                          ^) on line #1 of app/views/societes/new.html.erb:
+1: <% form_for(@societe ) do |f|, :url => path %>
+2:   <%= f.error_messages %>
+3: <fieldset>
+4: 	<legend>Ajout d'une societe</legend>
+
+    app/views/societes/new.html.erb:50:in `compile!'
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:35:07) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+ERROR: compiling _run_erb_app47views47societes47new46html46erb RAISED compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:1: syntax error, unexpected ',', expecting kEND
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(@societe ) , :url => path  do |f|; @output_buffer.concat "\n"
+                                                                                                                    ^
+Function body:           def _run_erb_app47views47societes47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(@societe ) , :url => path  do |f|; @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<fieldset>\n"
+@output_buffer.concat "\t<legend>Ajout d'une societe</legend>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "  \t"; @output_buffer.concat(( f.label :nom ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :nom , :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "     "; @output_buffer.concat(( f.label :adresse ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresse , :size=> "100%").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "    <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresse1 , :size=> "100%").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :ville ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :ville, :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :code_postal, "Code postal" ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :code_postal, :size => 10 ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :pays ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :pays ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :adresseweb, "Adresse Web" ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresseweb, :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :telephone ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :telephone ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :telephone1 ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :telephone1 ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.submit 'Ajouter' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</fieldset>\n"
+@output_buffer.concat "  </div>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Retour', societes_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:50:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/controllers/societes_controller.rb:29:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:1: syntax error, unexpected ',', expecting kEND
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(@societe ) , :url => path  do |f|; @output_buffer.concat "\n"
+                                                                                                                    ^) on line #1 of app/views/societes/new.html.erb:
+1: <% form_for(@societe ) , :url => path  do |f|%>
+2:   <%= f.error_messages %>
+3: <fieldset>
+4: 	<legend>Ajout d'une societe</legend>
+
+    app/views/societes/new.html.erb:50:in `compile!'
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:35:09) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+ERROR: compiling _run_erb_app47views47societes47new46html46erb RAISED compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:1: syntax error, unexpected ',', expecting kEND
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(@societe ) , :url => path  do |f|; @output_buffer.concat "\n"
+                                                                                                                    ^
+Function body:           def _run_erb_app47views47societes47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(@societe ) , :url => path  do |f|; @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<fieldset>\n"
+@output_buffer.concat "\t<legend>Ajout d'une societe</legend>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "  \t"; @output_buffer.concat(( f.label :nom ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :nom , :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "     "; @output_buffer.concat(( f.label :adresse ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresse , :size=> "100%").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "    <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresse1 , :size=> "100%").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :ville ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :ville, :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :code_postal, "Code postal" ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :code_postal, :size => 10 ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :pays ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :pays ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :adresseweb, "Adresse Web" ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresseweb, :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :telephone ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :telephone ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :telephone1 ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :telephone1 ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.submit 'Ajouter' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</fieldset>\n"
+@output_buffer.concat "  </div>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Retour', societes_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:50:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/controllers/societes_controller.rb:29:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:1: syntax error, unexpected ',', expecting kEND
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(@societe ) , :url => path  do |f|; @output_buffer.concat "\n"
+                                                                                                                    ^) on line #1 of app/views/societes/new.html.erb:
+1: <% form_for(@societe ) , :url => path  do |f|%>
+2:   <%= f.error_messages %>
+3: <fieldset>
+4: 	<legend>Ajout d'une societe</legend>
+
+    app/views/societes/new.html.erb:50:in `compile!'
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (515.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:35:44) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+ERROR: compiling _run_erb_app47views47societes47new46html46erb RAISED compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:1: syntax error, unexpected ')', expecting tASSOC
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(:url => path, @societe )  do |f|; @output_buffer.concat "\n"
+                                                                                                                                ^
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:48: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47societes47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(:url => path, @societe )  do |f|; @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<fieldset>\n"
+@output_buffer.concat "\t<legend>Ajout d'une societe</legend>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "  \t"; @output_buffer.concat(( f.label :nom ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :nom , :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  \n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "     "; @output_buffer.concat(( f.label :adresse ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresse , :size=> "100%").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "    <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresse1 , :size=> "100%").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :ville ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :ville, :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :code_postal, "Code postal" ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :code_postal, :size => 10 ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :pays ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :pays ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :adresseweb, "Adresse Web" ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :adresseweb, :size=> "100%" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :telephone ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :telephone ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :telephone1 ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :telephone1 ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "  <div>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.submit 'Ajouter' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</fieldset>\n"
+@output_buffer.concat "  </div>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Retour', societes_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:48:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/controllers/societes_controller.rb:29:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:1: syntax error, unexpected ')', expecting tASSOC
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_for(:url => path, @societe )  do |f|; @output_buffer.concat "\n"
+                                                                                                                                ^
+C:/Documents and Settings/hotline/My Documents/Aptana RadRails Workspace/iris-dev/app/views/societes/new.html.erb:48: syntax error, unexpected kENSURE, expecting $end) on line #1 of app/views/societes/new.html.erb:
+1: <% form_for(:url => path, @societe )  do |f|%>
+2:   <%= f.error_messages %>
+3: <fieldset>
+4: 	<legend>Ajout d'une societe</legend>
+
+    app/views/societes/new.html.erb:48:in `compile!'
+    app/controllers/societes_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (641.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-10 16:40:27) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
