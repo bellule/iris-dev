@@ -1,0 +1,51 @@
+<% form_for(@societe )  do |f|%>
+  <%= f.error_messages %>
+<fieldset>
+	<legend>Ajout d'une societe</legend>
+  <div>
+  	<%= f.label :nom %><br />
+    <%= f.text_field :nom , :size=> "100%" %>
+  </div>
+  
+  <div>
+     <%= f.label :adresse %><br />
+    <%= f.text_field :adresse , :size=> "100%"%>
+  </div>
+    <div>
+    <%= f.text_field :adresse1 , :size=> "100%"%>
+  </div>
+  <div>
+    <%= f.label :ville %><br />
+    <%= f.text_field :ville, :size=> "100%" %>
+  </div>
+  <div>
+    <%= f.label :code_postal, "Code postal" %><br />
+    <%= f.text_field :code_postal, :size => 10 %>
+  </div>
+  <div>
+    <%= f.label :pays %><br />
+    <%= f.text_field :pays %>
+  </div>
+  <div>
+    <%= f.label :adresseweb, "Adresse Web" %><br />
+    <%= f.text_field :adresseweb, :size=> "100%" %>
+  </div>
+  <div>
+    <%= f.label :telephone %><br />
+    <%= f.text_field :telephone %>
+  </div>
+  <div>
+    <%= f.label :telephone1 %><br />
+    <%= f.text_field :telephone1 %>
+  </div>
+  <div>
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
+  </div>
+  <div>
+    <%= f.submit 'Ajouter' %>
+	</fieldset>
+  </div>
+<% end %>
+
+<%= link_to 'Retour', societes_path %>

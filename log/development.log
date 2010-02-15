@@ -6217,3 +6217,645 @@ ActionController::DoubleRenderError (Render and/or redirect were called multiple
 Rendered rescues/_trace (141.0ms)
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-15 16:57:33) [PUT]
+  Parameters: {"commit"=>"Ok", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"24", "societe"=>{"ville"=>"ICI", "nom"=>"test", "adresse1"=>"", "pays"=>"FRANCE", "telephone1"=>"05.45.22.41.33", "fax"=>"05.45.22.41.32", "code_postal"=>"16152", "telephone"=>"05.45.22.41.41", "adresse"=>"rue des roses", "adresseweb"=>"http://www.willi.fr"}}
+  [4;36;1mSociete Load (47.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Redirected to http://localhost:3000/societes/24
+Completed in 2780ms (DB: 47) | 302 Found [http://localhost/societes/24]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-15 16:57:38) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Rendering template within layouts/societes
+Rendering societes/show
+Completed in 625ms (View: 406, DB: 0) | 200 OK [http://localhost/societes/24]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:57:41) [GET]
+  [4;36;1mSociete Load (31.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 812ms (View: 672, DB: 31) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 16:57:47) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/societes/24/edit]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-15 16:57:49) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/societes/new]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:57:53) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moi", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moi', '2010-02-15 15:57:53', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 15:57:53')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:53:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (31.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:58:31) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moi", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (0.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moi', '2010-02-15 15:58:32', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 15:58:32')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:53:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (328.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:58:37) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moi", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moi', '2010-02-15 15:58:37', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 15:58:37')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:53:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:59:37) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moi", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (0.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moi', '2010-02-15 15:59:37', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 15:59:37')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:53:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (640.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:59:41) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moi", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moi', '2010-02-15 15:59:41', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 15:59:41')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:53:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:59:45) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moi", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (0.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moi', '2010-02-15 15:59:45', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 15:59:45')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:53:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (390.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 17:00:57) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moi", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moi', '2010-02-15 16:00:57', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 16:00:57')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:53:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 17:01:43) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moi", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (0.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moi', '2010-02-15 16:01:43', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 16:01:43')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:52:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (562.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 17:01:47) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moihg", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (16.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moihg', '2010-02-15 16:01:47', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 16:01:47')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:52:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 17:01:59) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moihg", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (16.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moihg', '2010-02-15 16:01:59', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 16:01:59')[0m
+Redirected to http://localhost:3000/societes
+
+NoMethodError (undefined method `debug' for #<SocietesController:0x46fde80>):
+  app/controllers/societes_controller.rb:55:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (391.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 17:02:08) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moihg", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (15.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moihg', '2010-02-15 16:02:08', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 16:02:08')[0m
+Redirected to http://localhost:3000/societes
+
+NameError (undefined local variable or method `debug' for #<SocietesController:0x4837eb8>):
+  app/controllers/societes_controller.rb:55:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 17:02:36) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moihg", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (0.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moihg', '2010-02-15 16:02:36', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 16:02:36')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:52:in `create'
+  app/controllers/societes_controller.rb:49:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (390.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 17:03:37) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moihg", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (16.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moihg', '2010-02-15 16:03:37', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 16:03:37')[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 16) | 302 Found [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:03:37) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 140ms (View: 109, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-15 17:03:48) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/societes/new]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 17:03:51) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"cdscdsq", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'cdscdsq', '2010-02-15 16:03:51', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 16:03:51')[0m
+Redirected to http://localhost:3000/societes
+Completed in 141ms (DB: 0) | 302 Found [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:03:51) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 172ms (View: 140, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 17:03:53) [GET]
+  Parameters: {"id"=>"34"}
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 34) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 93ms (View: 47, DB: 15) | 200 OK [http://localhost/societes/34/edit]
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-15 17:03:59) [PUT]
+  Parameters: {"commit"=>"Ok", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"34", "societe"=>{"ville"=>"vdfvdfs", "nom"=>"moihg", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 34) [0m
+  [4;36;1mSociete Update (16.0ms)[0m   [0;1mUPDATE "societes" SET "ville" = 'vdfvdfs', "updated_at" = '2010-02-15 16:03:59' WHERE "id" = 34[0m
+Redirected to http://localhost:3000/societes/34
+Completed in 141ms (DB: 16) | 302 Found [http://localhost/societes/34]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-15 17:03:59) [GET]
+  Parameters: {"id"=>"34"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 34) [0m
+Rendering template within layouts/societes
+Rendering societes/show
+Completed in 282ms (View: 250, DB: 0) | 200 OK [http://localhost/societes/34]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-15 17:04:21) [GET]
+  Parameters: {"id"=>"34"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 34) [0m
+Rendering template within layouts/societes
+Rendering societes/show
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/societes/34]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:04:23) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 203ms (View: 156, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 17:04:25) [GET]
+  Parameters: {"id"=>"37"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 37) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/societes/37/edit]
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-15 17:04:28) [PUT]
+  Parameters: {"commit"=>"Ok", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"37", "societe"=>{"ville"=>"", "nom"=>"moihg", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"sxqxs", "adresseweb"=>""}}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 37) [0m
+  [4;36;1mSociete Update (0.0ms)[0m   [0;1mUPDATE "societes" SET "updated_at" = '2010-02-15 16:04:28', "adresse" = 'sxqxs' WHERE "id" = 37[0m
+Redirected to http://localhost:3000/societes
+Completed in 140ms (DB: 0) | 302 Found [http://localhost/societes/37]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:04:28) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 203ms (View: 156, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 17:04:31) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 35) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/societes/35/edit]
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-15 17:04:34) [PUT]
+  Parameters: {"commit"=>"Ok", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"35", "societe"=>{"ville"=>"", "nom"=>"moihg", "adresse1"=>"xsqxqsxqsxsqxs", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 35) [0m
+  [4;36;1mSociete Update (0.0ms)[0m   [0;1mUPDATE "societes" SET "adresse1" = 'xsqxqsxqsxsqxs', "updated_at" = '2010-02-15 16:04:34' WHERE "id" = 35[0m
+Redirected to http://localhost:3000/societes
+Completed in 188ms (DB: 16) | 302 Found [http://localhost/societes/35]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:04:35) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 437ms (View: 406, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 17:04:38) [GET]
+  Parameters: {"id"=>"38"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 38) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/societes/38/edit]
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-15 17:04:41) [PUT]
+  Parameters: {"commit"=>"Ok", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"38", "societe"=>{"ville"=>"", "nom"=>"cdscdsq", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"ssss", "adresseweb"=>""}}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 38) [0m
+  [4;36;1mSociete Update (0.0ms)[0m   [0;1mUPDATE "societes" SET "updated_at" = '2010-02-15 16:04:41', "adresse" = 'ssss' WHERE "id" = 38[0m
+Redirected to http://localhost:3000/societes
+Completed in 140ms (DB: 0) | 302 Found [http://localhost/societes/38]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:04:41) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 172ms (View: 141, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:04:43) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 172ms (View: 141, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 17:04:49) [GET]
+  Parameters: {"id"=>"38"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 38) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/societes/38/edit]
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-15 17:04:55) [PUT]
+  Parameters: {"commit"=>"Ok", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"38", "societe"=>{"ville"=>"qqqq", "nom"=>"cdscdsq", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"ssss", "adresseweb"=>""}}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 38) [0m
+  [4;35;1mSociete Update (0.0ms)[0m   [0mUPDATE "societes" SET "ville" = 'qqqq', "updated_at" = '2010-02-15 16:04:55' WHERE "id" = 38[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes/38]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:04:55) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 437ms (View: 406, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 17:05:38) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"36"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 36) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 36[0m
+Redirected to http://localhost:3000/societes
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/societes/36]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:05:38) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 172ms (View: 141, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 17:05:41) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"34"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 34) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 34[0m
+Redirected to http://localhost:3000/societes
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/societes/34]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:05:41) [GET]
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 156ms (View: 125, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 17:05:46) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"35"}
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 35) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 35[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 16) | 302 Found [http://localhost/societes/35]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:05:46) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 17:05:50) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 391ms (View: 312, DB: 0) | 200 OK [http://localhost/societes/24/edit]
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-15 17:05:54) [PUT]
+  Parameters: {"commit"=>"Ok", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"24", "societe"=>{"ville"=>"ICI", "nom"=>"test", "adresse1"=>"", "pays"=>"FRANCE", "telephone1"=>"05.45.22.41.33", "fax"=>"05.45.22.41.32", "code_postal"=>"16152", "telephone"=>"05.45.22.41.41", "adresse"=>"rue des roses", "adresseweb"=>"http://www.willi.fr"}}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Redirected to http://localhost:3000/societes
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/societes/24]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:05:54) [GET]
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 157ms (View: 125, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:08:55) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:10:25) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 157ms (View: 125, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-15 17:10:30) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/societes/new]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 17:10:33) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"azc", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (0.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'azc', '2010-02-15 16:10:33', '', NULL, NULL, '', NULL, '', NULL, '', '', '', NULL, NULL, '', '2010-02-15 16:10:33')[0m
+Redirected to http://localhost:3000/societes
+Completed in 141ms (DB: 0) | 302 Found [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 17:10:34) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 469ms (View: 422, DB: 0) | 200 OK [http://localhost/societes]
+  [4;36;1mSQL (16.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSocietes (20100210103343)
+Migrating to CreateContacts (20100215162549)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "societe_id" integer, "nom" varchar(255), "prenom" varchar(255), "titre" varchar(255), "adresse" varchar(255), "adresse1" varchar(255), "code_postal" integer, "ville" varchar(255), "pays" varchar(255), "email" varchar(255), "publipostage" boolean, "tel_direct" varchar(255), "fax_direct" varchar(255), "gsm" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100215162549')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (15.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("contacts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("societes")[0m
