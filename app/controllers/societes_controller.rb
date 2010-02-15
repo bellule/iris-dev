@@ -5,7 +5,7 @@ class SocietesController < ApplicationController
   
   def index
     #    @societes = Societe.all
-     @societes = Societe.paginate :page => params[:page], :order => 'nom DESC',:per_page => 25
+     @societes = Societe.paginate :page => params[:page], :order => 'nom',:per_page => 25
      
     respond_to do |format|
       format.html # index.html.erb
@@ -51,8 +51,9 @@ class SocietesController < ApplicationController
         flash[:notice] = 'Societe was successfully created.'
         format.html { redirect_to(@societe) }
         format.xml  { render :xml => @societe, :status => :created, :location => @societe }
-        
-      else
+        redirect_to  :action => "index"
+        return
+       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @societe.errors, :status => :unprocessable_entity }
       end
@@ -69,6 +70,8 @@ class SocietesController < ApplicationController
         flash[:notice] = 'Societe was successfully updated.'
         format.html { redirect_to(@societe) }
         format.xml  { head :ok }
+        redirect_to  :action => "index"
+        return
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @societe.errors, :status => :unprocessable_entity }
