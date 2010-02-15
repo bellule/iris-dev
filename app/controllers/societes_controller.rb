@@ -1,9 +1,11 @@
 class SocietesController < ApplicationController
   # GET /societes
   # GET /societes.xml
+  
+  
   def index
     #    @societes = Societe.all
-     @societes = Societe.paginate :page => params[:page], :order => 'nom DESC',:per_page => 5
+     @societes = Societe.paginate :page => params[:page], :order => 'nom DESC',:per_page => 25
      
     respond_to do |format|
       format.html # index.html.erb
@@ -13,6 +15,7 @@ class SocietesController < ApplicationController
 
   # GET /societes/1
   # GET /societes/1.xml
+  
   def show
     @societe = Societe.find(params[:id])
 
@@ -48,6 +51,7 @@ class SocietesController < ApplicationController
         flash[:notice] = 'Societe was successfully created.'
         format.html { redirect_to(@societe) }
         format.xml  { render :xml => @societe, :status => :created, :location => @societe }
+        
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @societe.errors, :status => :unprocessable_entity }

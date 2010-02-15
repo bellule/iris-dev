@@ -4947,3 +4947,1273 @@ Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 15:01:03) [GET]
 Rendering template within layouts/societes
 Rendering societes/index
 Completed in 94ms (View: 62, DB: 0) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 15:52:51) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 1687ms (View: 1547, DB: 0) | 200 OK [http://localhost/societes/]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 15:52:56) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 203ms (View: 156, DB: 0) | 200 OK [http://localhost/societes/]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 15:53:04) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 5[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 296ms (View: 218, DB: 16) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 15:54:11) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 5[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 218ms (View: 187, DB: 16) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 15:57:58) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 5[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 265ms (View: 234, DB: 16) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 15:58:02) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 10) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 110ms (View: 63, DB: 0) | 200 OK [http://localhost/societes/10/edit]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 15:58:19) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 5[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 15:58:30) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 5[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 94ms (View: 63, DB: 16) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 15:58:36) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 5[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 93ms (View: 78, DB: 0) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 15:59:31) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 5[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 375ms (View: 344, DB: 0) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-02-15 16:03:42) [GET]
+
+SyntaxError (C:/Documents and Settings/hotline/Mes documents/iris-dev/app/controllers/societes_controller.rb:49: syntax error, unexpected tASSOC, expecting kEND
+        redirect_to => 'index'
+                      ^):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-15 16:03:57) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/societes/new]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:04:01) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"tt", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (16.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'tt', '2010-02-15 15:04:01', '', NULL, NULL, '', NULL, '', NULL, NULL, '', '', NULL, NULL, '', '2010-02-15 15:04:01')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:50:in `create'
+  app/controllers/societes_controller.rb:46:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (1015.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:04:50) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"tt", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'tt', '2010-02-15 15:04:50', '', NULL, NULL, '', NULL, '', NULL, NULL, '', '', NULL, NULL, '', '2010-02-15 15:04:50')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:49:in `create'
+  app/controllers/societes_controller.rb:46:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-02-15 16:05:45) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"tt", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+
+SyntaxError (C:/Documents and Settings/hotline/Mes documents/iris-dev/app/controllers/societes_controller.rb:49: syntax error, unexpected ':', expecting kEND
+        redirect_to :controler:=> 'societes' ,:action => 'index'
+                               ^
+C:/Documents and Settings/hotline/Mes documents/iris-dev/app/controllers/societes_controller.rb:49: syntax error, unexpected ',', expecting kEND
+        redirect_to :controler:=> 'societes' ,:action => 'index'
+                                              ^):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-02-15 16:05:55) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"tt", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+
+SyntaxError (C:/Documents and Settings/hotline/Mes documents/iris-dev/app/controllers/societes_controller.rb:49: syntax error, unexpected ':', expecting kEND
+        redirect_to :controler:=> 'societe' ,:action => 'index'
+                               ^
+C:/Documents and Settings/hotline/Mes documents/iris-dev/app/controllers/societes_controller.rb:49: syntax error, unexpected ',', expecting kEND
+        redirect_to :controler:=> 'societe' ,:action => 'index'
+                                             ^):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:06:39) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"tt", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (0.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'tt', '2010-02-15 15:06:39', '', NULL, NULL, '', NULL, '', NULL, NULL, '', '', NULL, NULL, '', '2010-02-15 15:06:39')[0m
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "societes" [0m
+
+ActionView::MissingTemplate (Missing template societes/create.erb in view path app/views):
+  app/controllers/societes_controller.rb:8:in `index'
+  app/controllers/societes_controller.rb:49:in `create'
+  app/controllers/societes_controller.rb:46:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:06:44) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 188ms (View: 156, DB: 0) | 200 OK [http://localhost/societes/]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-15 16:06:47) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/societes/new]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:06:49) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"a", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'a', '2010-02-15 15:06:49', '', NULL, NULL, '', NULL, '', NULL, NULL, '', '', NULL, NULL, '', '2010-02-15 15:06:49')[0m
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "societes" [0m
+
+ActionView::MissingTemplate (Missing template societes/create.erb in view path app/views):
+  app/controllers/societes_controller.rb:8:in `index'
+  app/controllers/societes_controller.rb:49:in `create'
+  app/controllers/societes_controller.rb:46:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:07:22) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"a", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (15.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'a', '2010-02-15 15:07:22', '', NULL, NULL, '', NULL, '', NULL, NULL, '', '', NULL, NULL, '', '2010-02-15 15:07:22')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:50:in `create'
+  app/controllers/societes_controller.rb:46:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:08:02) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"a", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'a', '2010-02-15 15:08:02', '', NULL, NULL, '', NULL, '', NULL, NULL, '', '', NULL, NULL, '', '2010-02-15 15:08:02')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:50:in `create'
+  app/controllers/societes_controller.rb:46:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:08:06) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"a", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (125.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'a', '2010-02-15 15:08:07', '', NULL, NULL, '', NULL, '', NULL, NULL, '', '', NULL, NULL, '', '2010-02-15 15:08:07')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:50:in `create'
+  app/controllers/societes_controller.rb:46:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (140.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:08:15) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"a", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'a', '2010-02-15 15:08:15', '', NULL, NULL, '', NULL, '', NULL, NULL, '', '', NULL, NULL, '', '2010-02-15 15:08:15')[0m
+Redirected to http://localhost:3000/societes/18
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/societes]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-15 16:08:15) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 18) [0m
+Rendering template within layouts/societes
+Rendering societes/show
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/societes/18]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:08:38) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"a", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'a', '2010-02-15 15:08:38', '', NULL, NULL, '', NULL, '', NULL, NULL, '', '', NULL, NULL, '', '2010-02-15 15:08:38')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/societes_controller.rb:51:in `create'
+  app/controllers/societes_controller.rb:46:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (328.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:09:17) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"a", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (16.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'a', '2010-02-15 15:09:17', '', NULL, NULL, '', NULL, '', NULL, NULL, '', '', NULL, NULL, '', '2010-02-15 15:09:17')[0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:53:in `create'
+  app/controllers/societes_controller.rb:48:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:09:57) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"a", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'a', '2010-02-15 15:09:57', '', NULL, NULL, '', NULL, '', NULL, NULL, '', '', NULL, NULL, '', '2010-02-15 15:09:57')[0m
+Redirected to http://localhost:3000/societes/21
+Completed in 141ms (DB: 0) | 302 Found [http://localhost/societes]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-15 16:09:57) [GET]
+  Parameters: {"id"=>"21"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 21) [0m
+Rendering template within layouts/societes
+Rendering societes/show
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/societes/21]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:09:58) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:10:03) [GET]
+  Parameters: {"page"=>"4"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 15[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 453ms (View: 422, DB: 0) | 200 OK [http://localhost/societes?page=4]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:10:05) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 5 OFFSET 5[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 125ms (View: 94, DB: 16) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:10:16) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 25[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:10:17) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 25[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:10:18) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 25[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "societes" [0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/societes?page=2]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:10:24) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 218ms (View: 171, DB: 16) | 200 OK [http://localhost/societes?page=1]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:12:22) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 172ms (View: 140, DB: 0) | 200 OK [http://localhost/societes?page=1]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 16:13:35) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 9) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 281ms (View: 203, DB: 16) | 200 OK [http://localhost/societes/9/edit]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 16:13:38) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 9) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/societes/9/edit]
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-15 16:13:40) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"9", "societe"=>{"nom"=>"toto", "adresse"=>"icic"}}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 9) [0m
+Redirected to http://localhost:3000/societes/9
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/societes/9]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-15 16:13:40) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 9) [0m
+Rendering template within layouts/societes
+Rendering societes/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/societes/9]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:14:35) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 234ms (View: 172, DB: 15) | 200 OK [http://localhost/societes?page=1]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:14:54) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+
+ActionView::TemplateError (undefined method `image_to' for #<ActionView::Base:0x46a1590>) on line #19 of app/views/societes/index.html.erb:
+16: 	<td><%=h societe.code_postal %></td>
+17: 	<td><%=h societe.telephone %></td>
+18: 	<td><%=h societe.fax %></td>
+19:     <td><%= image_to 'images/b_drop.png', societe, :confirm => 'Are you sure?', :method => :delete %></td>
+20: 	</td>
+21: 	</tr>
+22: <% end %>
+
+    app/views/societes/index.html.erb:19
+    app/views/societes/index.html.erb:12:in `each'
+    app/views/societes/index.html.erb:12
+    app/controllers/societes_controller.rb:10:in `index'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:15:07) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+
+ActionView::TemplateError (undefined method `images_to' for #<ActionView::Base:0x47616ec>) on line #19 of app/views/societes/index.html.erb:
+16: 	<td><%=h societe.code_postal %></td>
+17: 	<td><%=h societe.telephone %></td>
+18: 	<td><%=h societe.fax %></td>
+19:     <td><%= images_to 'images/b_drop.png', societe, :confirm => 'Are you sure?', :method => :delete %></td>
+20: 	</td>
+21: 	</tr>
+22: <% end %>
+
+    app/views/societes/index.html.erb:19
+    app/views/societes/index.html.erb:12:in `each'
+    app/views/societes/index.html.erb:12
+    app/controllers/societes_controller.rb:10:in `index'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:15:10) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+
+ActionView::TemplateError (undefined method `images_to' for #<ActionView::Base:0x47747d8>) on line #19 of app/views/societes/index.html.erb:
+16: 	<td><%=h societe.code_postal %></td>
+17: 	<td><%=h societe.telephone %></td>
+18: 	<td><%=h societe.fax %></td>
+19:     <td><%= images_to 'images/b_drop.png', societe, :confirm => 'Are you sure?', :method => :delete %></td>
+20: 	</td>
+21: 	</tr>
+22: <% end %>
+
+    app/views/societes/index.html.erb:19
+    app/views/societes/index.html.erb:12:in `each'
+    app/views/societes/index.html.erb:12
+    app/controllers/societes_controller.rb:10:in `index'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (657.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:18:52) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 250ms (View: 203, DB: 16) | 200 OK [http://localhost/societes?page=1]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:19:07) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"12"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 12) [0m
+  [4;36;1mSociete Destroy (15.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 12[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 15) | 302 Found [http://localhost/societes/12]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:19:07) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 219ms (View: 188, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:21:57) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 203ms (View: 172, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:22:17) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 234ms (View: 188, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:22:45) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 219ms (View: 188, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 16:25:47) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 9) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/societes/9/edit]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-15 16:26:06) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 110ms (View: 78, DB: 0) | 200 OK [http://localhost/societes/new]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:26:29) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"tititi", "nom"=>"toto", "adresse1"=>"", "pays"=>"FRANCE", "telephone1"=>"05.45.22.41.41", "code_postal"=>"16600", "telephone"=>"05.45.22.41.41", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Create (0.0ms)[0m   [0;1mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('tititi', 'toto', '2010-02-15 15:26:29', '', NULL, NULL, 'FRANCE', NULL, '05.45.22.41.41', 16600, NULL, '', '05.45.22.41.41', NULL, NULL, '', '2010-02-15 15:26:29')[0m
+Redirected to http://localhost:3000/societes/22
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-15 16:26:29) [GET]
+  Parameters: {"id"=>"22"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 22) [0m
+Rendering template within layouts/societes
+Rendering societes/show
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/societes/22]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:26:31) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 218ms (View: 187, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:26:34) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 218ms (View: 171, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:26:35) [GET]
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 235ms (View: 203, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:26:36) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 313ms (View: 266, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 16:26:42) [GET]
+  Parameters: {"id"=>"22"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 22) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/societes/22/edit]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-15 16:27:33) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-15 16:28:11) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/societes/new]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:28:23) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"", "nom"=>"moi", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"05.45.22.41.32", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Create (0.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('', 'moi', '2010-02-15 15:28:23', '', NULL, NULL, '', NULL, '', NULL, '05.45.22.41.32', '', '', NULL, NULL, '', '2010-02-15 15:28:23')[0m
+Redirected to http://localhost:3000/societes/23
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-15 16:28:23) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 23) [0m
+Rendering template within layouts/societes
+Rendering societes/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/societes/23]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:25) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 469ms (View: 422, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 16:28:33) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 23) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/societes/23/edit]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:35) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 250ms (View: 203, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:37) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"3"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 3) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/societes
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/societes/3]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:37) [GET]
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 219ms (View: 187, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:39) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"4"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 4) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/societes
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/societes/4]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:40) [GET]
+  [4;35;1mSociete Load (47.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 750ms (View: 579, DB: 47) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:42) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"5"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 5) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 5[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes/5]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:42) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 203ms (View: 172, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:44) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"6"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 6) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 6[0m
+Redirected to http://localhost:3000/societes
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/societes/6]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:44) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 187ms (View: 156, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:45) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"7"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 7) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 7[0m
+Redirected to http://localhost:3000/societes
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/societes/7]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:45) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 703ms (View: 672, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:47) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"11"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 11) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 11[0m
+Redirected to http://localhost:3000/societes
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/societes/11]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:47) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 188ms (View: 141, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:49) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"13"}
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 13) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 13[0m
+Redirected to http://localhost:3000/societes
+Completed in 109ms (DB: 16) | 302 Found [http://localhost/societes/13]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:50) [GET]
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 172ms (View: 140, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:51) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"9"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 9) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 9[0m
+Redirected to http://localhost:3000/societes
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/societes/9]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:51) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 156ms (View: 125, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:52) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"22"}
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 22) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 22[0m
+Redirected to http://localhost:3000/societes
+Completed in 110ms (DB: 16) | 302 Found [http://localhost/societes/22]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:53) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:54) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"2"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 2) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/societes
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/societes/2]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:54) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 141ms (View: 109, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:55) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"23"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 23) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 23[0m
+Redirected to http://localhost:3000/societes
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/societes/23]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:56) [GET]
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 140ms (View: 109, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:58) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"10"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 10) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 10[0m
+Redirected to http://localhost:3000/societes
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/societes/10]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:28:58) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 141ms (View: 110, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:28:59) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"8"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 8) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 8[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes/8]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:29:00) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 359ms (View: 94, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:29:02) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"14"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 14) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 14[0m
+Redirected to http://localhost:3000/societes
+Completed in 140ms (DB: 0) | 302 Found [http://localhost/societes/14]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:29:02) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 125ms (View: 94, DB: 16) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:29:03) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"15"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 15) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 15[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes/15]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:29:04) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 109ms (View: 78, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:29:06) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"17"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 17) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 17[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes/17]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:29:06) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 94ms (View: 63, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:29:11) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"19"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 19) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 19[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes/19]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:29:11) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 110ms (View: 79, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:29:13) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"18"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 18) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 18[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes/18]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:29:14) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 172ms (View: 157, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:29:15) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"20"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 20) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 20[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes/20]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:29:16) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 94ms (View: 63, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:29:18) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"16"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 16) [0m
+  [4;36;1mSociete Destroy (0.0ms)[0m   [0;1mDELETE FROM "societes" WHERE "id" = 16[0m
+Redirected to http://localhost:3000/societes
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes/16]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:29:18) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#destroy (for 127.0.0.1 at 2010-02-15 16:29:21) [DELETE]
+  Parameters: {"authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"21"}
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 21) [0m
+  [4;35;1mSociete Destroy (0.0ms)[0m   [0mDELETE FROM "societes" WHERE "id" = 21[0m
+Redirected to http://localhost:3000/societes
+Completed in 172ms (DB: 15) | 302 Found [http://localhost/societes/21]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:29:21) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-15 16:29:22) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/societes/new]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-15 16:30:04) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "societe"=>{"ville"=>"ICI", "nom"=>"test", "adresse1"=>"", "pays"=>"FRANCE", "telephone1"=>"05.45.22.41.33", "fax"=>"05.45.22.41.32", "code_postal"=>"16152", "telephone"=>"05.45.22.41.41", "adresse"=>"rue des roses", "adresseweb"=>"http://www.willi.fr"}}
+  [4;35;1mSociete Create (0.0ms)[0m   [0mINSERT INTO "societes" ("ville", "nom", "updated_at", "adresse1", "alerte", "commercial", "pays", "siret", "telephone1", "code_postal", "fax", "adresse", "telephone", "commentaire", "naf", "adresseweb", "created_at") VALUES('ICI', 'test', '2010-02-15 15:30:04', '', NULL, NULL, 'FRANCE', NULL, '05.45.22.41.33', 16152, '05.45.22.41.32', 'rue des roses', '05.45.22.41.41', NULL, NULL, 'http://www.willi.fr', '2010-02-15 15:30:04')[0m
+Redirected to http://localhost:3000/societes/24
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/societes]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-15 16:30:04) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Rendering template within layouts/societes
+Rendering societes/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/societes/24]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:30:05) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 63ms (View: 32, DB: 15) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:31:31) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:31:40) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:36:32) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 16:39:26) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 125ms (View: 63, DB: 16) | 200 OK [http://localhost/societes/24/edit]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 16:39:26) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/societes/24/edit]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 16:39:32) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/societes/24/edit]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 16:39:43) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/societes/24/edit]
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-15 16:40:05) [PUT]
+  Parameters: {"commit"=>"Ok", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"24", "societe"=>{"ville"=>"ICI", "nom"=>"test", "adresse1"=>"", "pays"=>"FRANCE", "telephone1"=>"05.45.22.41.33", "fax"=>"05.45.22.41.32", "code_postal"=>"16152", "telephone"=>"05.45.22.41.41", "adresse"=>"rue des roses", "adresseweb"=>"http://www.willi.fr"}}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Redirected to http://localhost:3000/societes/24
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/societes/24]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-15 16:40:06) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Rendering template within layouts/societes
+Rendering societes/show
+Completed in 282ms (View: 16, DB: 0) | 200 OK [http://localhost/societes/24]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-15 16:41:44) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom DESC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 78ms (View: 46, DB: 0) | 200 OK [http://localhost/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-15 16:41:46) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/societes/24/edit]
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-15 16:41:47) [PUT]
+  Parameters: {"commit"=>"Ok", "authenticity_token"=>"+HFup20m5TV8THxh3ZJCFYbd1NPWCEavdiShu60em1k=", "id"=>"24", "societe"=>{"ville"=>"ICI", "nom"=>"test", "adresse1"=>"", "pays"=>"FRANCE", "telephone1"=>"05.45.22.41.33", "fax"=>"05.45.22.41.32", "code_postal"=>"16152", "telephone"=>"05.45.22.41.41", "adresse"=>"rue des roses", "adresseweb"=>"http://www.willi.fr"}}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 24) [0m
+Redirected to http://localhost:3000/societes
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/societes_controller.rb:71:in `update'
+  app/controllers/societes_controller.rb:67:in `update'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)

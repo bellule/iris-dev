@@ -2,6 +2,7 @@
   <%= f.error_messages %>
 <fieldset>
 	<legend>Ajout d'une societe</legend>
+	
   <div>
   	<%= f.label :nom %><br />
     <%= f.text_field :nom , :size=> "100%" %>
@@ -37,6 +38,10 @@
   <div>
     <%= f.label :telephone1 %><br />
     <%= f.text_field :telephone1 %>
+  </div>
+  <div>
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
   </div>
   <div>
     <%= f.submit 'Ajouter' %>

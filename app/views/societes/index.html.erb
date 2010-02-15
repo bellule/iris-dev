@@ -11,13 +11,12 @@
 
 <% @societes.each do |societe| %>
   <tr class="<%= cycle("even","odd")%>">
-  	<td><%=link_to societe.nom, societe %></td>
+  	<td><%=link_to societe.nom, edit_societe_path(societe) %></td>
     <td><%=h societe.ville %></td>
 	<td><%=h societe.code_postal %></td>
 	<td><%=h societe.telephone %></td>
 	<td><%=h societe.fax %></td>
-    <td><%= link_to 'Edit', edit_societe_path(societe) %></td>
-    <td><%= link_to 'Destroy', societe, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to  image_tag("b_drop.png"), societe, :confirm => 'Are you sure?', :method => :delete %></td>
 	</td>
 	</tr>
 <% end %>
