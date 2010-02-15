@@ -1,28 +1,29 @@
-<h1 align=center>Liste des societes</h1>
+<h1>Liste des societes</h1>
 
-<table width=80%, align=center, border=0,	cellspacing=0> 
+<table>
   <tr>
     <th>Nom</th>
-    <th>Ville</th>
+    <th>Adresse</th>
 	<th>Code postal</th>
+	<th>Ville</th>
 	<th>Téléphone</th>
 	<th>Fax</th>
   </tr>
 
 <% @societes.each do |societe| %>
-  <tr class="<%= cycle("even","odd")%>">
-  	<td><%=link_to societe.nom, societe %></td>
+  <tr>
+    <td><%=h societe.nom %></td>
     <td><%=h societe.ville %></td>
 	<td><%=h societe.code_postal %></td>
 	<td><%=h societe.telephone %></td>
 	<td><%=h societe.fax %></td>
+    <td><%= link_to 'Show', societe %></td>
     <td><%= link_to 'Edit', edit_societe_path(societe) %></td>
     <td><%= link_to 'Destroy', societe, :confirm => 'Are you sure?', :method => :delete %></td>
-	</td>
-	</tr>
+  </tr>
 <% end %>
 </table>
-<%= will_paginate @societes %> 
-<%= link_to "Ajout d'une societe", new_societe_path %>
+
 <br />
 
+<%= link_to "Ajout d'une societe", new_societe_path %>

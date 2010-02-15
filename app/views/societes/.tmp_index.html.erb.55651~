@@ -22,7 +22,6 @@
 	</tr>
 <% end %>
 </table>
-<%= will_paginate @societes %> 
 <%= link_to "Ajout d'une societe", new_societe_path %>
 <br />
 

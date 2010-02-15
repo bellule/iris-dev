@@ -2,8 +2,9 @@ class SocietesController < ApplicationController
   # GET /societes
   # GET /societes.xml
   def index
-    @societes = Societe.all
-
+    #    @societes = Societe.all
+     @societes = Societe.paginate :page => params[:page], :order => 'nom DESC',:per_page => 5
+     
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @societes }
