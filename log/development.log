@@ -6859,3 +6859,427 @@ Migrating to CreateContacts (20100215162549)
 [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("contacts")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("societes")[0m
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:28:40) [GET]
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 2844ms (View: 2797, DB: 16) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:28:49) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 187ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:28:50) [GET]
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 172ms (View: 140, DB: 16) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:28:51) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 282ms (View: 235, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:28:52) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 188ms (View: 157, DB: 15) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:28:53) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 188ms (View: 141, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:30:14) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 156ms (View: 125, DB: 15) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:30:17) [GET]
+  Parameters: {"id"=>"28"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 28) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/societes/28/edit]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:30:20) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 203ms (View: 172, DB: 15) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:30:21) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 547ms (View: 516, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:30:24) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 31) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/societes/31/edit]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:30:26) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 203ms (View: 156, DB: 16) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:30:27) [GET]
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 172ms (View: 141, DB: 16) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:30:30) [GET]
+  Parameters: {"id"=>"31"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 31) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/31/edit]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:30:31) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 31) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/31/edit]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:30:32) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 187ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:30:34) [GET]
+  Parameters: {"id"=>"29"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 29) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 313ms (View: 219, DB: 0) | 200 OK [http://127.0.0.1/societes/29/edit]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:30:38) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 172ms (View: 141, DB: 15) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:30:57) [GET]
+  Parameters: {"id"=>"28"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 28) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/28/edit]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:31:00) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 187ms (View: 141, DB: 16) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-16 11:31:08) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-16 11:32:29) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 109ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:32:33) [GET]
+  [4;36;1mSociete Load (47.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 1078ms (View: 969, DB: 47) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-16 11:32:36) [GET]
+Rendering template within layouts/societes
+Rendering societes/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:41:15) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 2469ms (View: 2422, DB: 15) | 200 OK [http://127.0.0.1/societes/]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:41:20) [GET]
+  Parameters: {"id"=>"26"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 26) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/societes/26/edit]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:41:23) [GET]
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 157ms (View: 125, DB: 16) | 200 OK [http://127.0.0.1/societes/]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:46:24) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 235ms (View: 203, DB: 16) | 200 OK [http://127.0.0.1/societes/]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:46:26) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 406ms (View: 375, DB: 15) | 200 OK [http://127.0.0.1/societes/]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:46:27) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 188ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/societes/]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:46:34) [GET]
+  [4;36;1mSociete Load (15.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 156ms (View: 125, DB: 15) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:47:01) [GET]
+  [4;35;1mSociete Load (15.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 156ms (View: 125, DB: 15) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:47:03) [GET]
+  Parameters: {"id"=>"38"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 38) [0m
+Rendering template within layouts/societes
+Rendering societes/edit
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/38/edit]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:47:06) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/societes
+Rendering societes/index
+Completed in 359ms (View: 312, DB: 16) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:47:51) [GET]
+  [4;36;1mSociete Load (31.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 532ms (View: 157, DB: 31) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:47:52) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 172ms (View: 141, DB: 16) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:47:53) [GET]
+  [4;36;1mSociete Load (16.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 157ms (View: 125, DB: 16) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:48:09) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:48:13) [GET]
+  [4;36;1mSociete Load (63.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 1016ms (View: 812, DB: 63) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:48:15) [GET]
+  Parameters: {"id"=>"38"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 38) [0m
+Rendering template within layouts/application
+Rendering societes/edit
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/38/edit]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:48:20) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 203ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:48:22) [GET]
+  Parameters: {"id"=>"28"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering societes/edit
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/societes/28/edit]
+
+
+Processing SocietesController#show (for 127.0.0.1 at 2010-02-16 11:48:23) [GET]
+  Parameters: {"id"=>"28"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 28) [0m
+Rendering template within layouts/application
+Rendering societes/show
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/28]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:48:24) [GET]
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 187ms (View: 156, DB: 16) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:55:09) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 875ms (View: 828, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:55:12) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:55:13) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 27) [0m
+Rendering template within layouts/application
+Rendering societes/edit
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes/27/edit]
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-16 11:55:21) [PUT]
+  Parameters: {"commit"=>"Ok", "authenticity_token"=>"MeU4kAImyOFr5lwn5ZpMKhHQw7EmnFqDKHnf6E2A+58=", "id"=>"27", "societe"=>{"ville"=>"", "nom"=>"moi", "adresse1"=>"", "pays"=>"FRANCE", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;35;1mSociete Load (16.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 27) [0m
+  [4;36;1mSociete Update (16.0ms)[0m   [0;1mUPDATE "societes" SET "pays" = 'FRANCE', "updated_at" = '2010-02-16 10:55:21' WHERE "id" = 27[0m
+Redirected to http://127.0.0.1:3000/societes
+Completed in 140ms (DB: 32) | 302 Found [http://127.0.0.1/societes/27]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:55:21) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#new (for 127.0.0.1 at 2010-02-16 11:55:28) [GET]
+Rendering template within layouts/application
+Rendering societes/new
+Completed in 250ms (View: 219, DB: 0) | 200 OK [http://127.0.0.1/societes/new]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-16 11:55:30) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"MeU4kAImyOFr5lwn5ZpMKhHQw7EmnFqDKHnf6E2A+58=", "societe"=>{"ville"=>"", "nom"=>"", "adresse1"=>"jf", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+Rendering template within layouts/application
+Rendering societes/new
+Completed in 109ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#create (for 127.0.0.1 at 2010-02-16 11:56:44) [POST]
+  Parameters: {"commit"=>"Ajouter", "authenticity_token"=>"MeU4kAImyOFr5lwn5ZpMKhHQw7EmnFqDKHnf6E2A+58=", "societe"=>{"ville"=>"", "nom"=>"", "adresse1"=>"jf", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+Rendering template within layouts/application
+Rendering societes/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:56:47) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 219ms (View: 172, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:59:30) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 219ms (View: 172, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:59:34) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 31) [0m
+Rendering template within layouts/application
+Rendering societes/edit
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/societes/31/edit]
+
+
+Processing SocietesController#edit (for 127.0.0.1 at 2010-02-16 11:59:37) [GET]
+  Parameters: {"id"=>"31"}
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" WHERE ("societes"."id" = 31) [0m
+Rendering template within layouts/application
+Rendering societes/edit
+Completed in 297ms (View: 282, DB: 0) | 200 OK [http://127.0.0.1/societes/31/edit]
+
+
+Processing SocietesController#update (for 127.0.0.1 at 2010-02-16 11:59:39) [PUT]
+  Parameters: {"commit"=>"Ok", "authenticity_token"=>"MeU4kAImyOFr5lwn5ZpMKhHQw7EmnFqDKHnf6E2A+58=", "id"=>"31", "societe"=>{"ville"=>"", "nom"=>"moi", "adresse1"=>"", "pays"=>"", "telephone1"=>"", "fax"=>"", "code_postal"=>"", "telephone"=>"", "adresse"=>"", "adresseweb"=>""}}
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" WHERE ("societes"."id" = 31) [0m
+Redirected to http://127.0.0.1:3000/societes
+Completed in 47ms (DB: 0) | 302 Found [http://127.0.0.1/societes/31]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 11:59:39) [GET]
+  [4;35;1mSociete Load (0.0ms)[0m   [0mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 156ms (View: 140, DB: 0) | 200 OK [http://127.0.0.1/societes]
+
+
+Processing SocietesController#index (for 127.0.0.1 at 2010-02-16 12:02:05) [GET]
+  [4;36;1mSociete Load (0.0ms)[0m   [0;1mSELECT * FROM "societes" ORDER BY nom LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering societes/index
+Completed in 203ms (View: 156, DB: 0) | 200 OK [http://127.0.0.1/societes]

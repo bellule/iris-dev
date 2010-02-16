@@ -61,6 +61,6 @@ errorExplanation ul li {
   font-size: 12px;
   list-style: square;
 }
-tr:nth-child(even) {background: #CCC}
-tr:nth-child(odd) {background: #FFF}
+
+
 

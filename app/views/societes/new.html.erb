@@ -1,3 +1,5 @@
+
+
 <% form_for(@societe )  do |f|%>
   <%= f.error_messages %>
 <fieldset>
@@ -15,13 +17,14 @@
     <div>
     <%= f.text_field :adresse1 , :size=> "100%"%>
   </div>
-  <div>
-    <%= f.label :ville %><br />
-    <%= f.text_field :ville, :size=> "100%" %>
-  </div>
+  
   <div>
     <%= f.label :code_postal, "Code postal" %><br />
     <%= f.text_field :code_postal, :size => 10 %>
+  </div>
+  <div>
+    <%= f.label :ville %><br />
+    <%= f.text_field :ville, :size=> "100%" %>
   </div>
   <div>
     <%= f.label :pays %><br />
